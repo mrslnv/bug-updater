@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Entity Type="defect">
+    <Fields>
+        <Field Name="has-change">
+            <Value></Value>
+        </Field>
+        <Field Name="planned-closing-ver">
+            <Value></Value>
+        </Field>
+        <Field Name="reproducible">
+            <Value></Value>
+        </Field>
+        <Field Name="has-others-linkage">
+            <Value>N</Value>
+        </Field>
+        <Field Name="description">
+            <Value>&lt;html&gt;&lt;body&gt;iooiiooi&lt;/body&gt;&lt;/html&gt;</Value>
+        </Field>
+        <Field Name="priority">
+            <Value>P5</Value>
+        </Field>
+        <Field Name="run-reference"/>
+        <Field Name="alert-data">
+            <Value></Value>
+        </Field>
+        <Field Name="dev-comments">
+            <Value></Value>
+        </Field>
+        <Field Name="to-mail">
+            <Value></Value>
+        </Field>
+        <Field Name="cycle-id"/>
+        <Field Name="status">
+            <Value>Closed</Value>
+        </Field>
+        <Field Name="closing-date">
+            <Value>2011-02-16</Value>
+        </Field>
+        <Field Name="detected-in-rel">
+            <Value ReferenceValue="ALI - Spring">1002</Value>
+        </Field>
+        <Field Name="bug-ver-stamp">
+            <Value>4</Value>
+        </Field>
+        <Field Name="estimated-fix-time"/>
+        <Field Name="project">
+            <Value>ALI</Value>
+        </Field>
+        <Field Name="target-rel">
+            <Value ReferenceValue="ALI - Spring">1002</Value>
+        </Field>
+        <Field Name="step-reference"/>
+        <Field Name="owner">
+            <Value>vladimir.ulicny_hp.com</Value>
+        </Field>
+        <Field Name="actual-fix-time">
+            <Value>21</Value>
+        </Field>
+        <Field Name="request-type">
+            <Value></Value>
+        </Field>
+        <Field Name="user-05">
+            <Value>1111</Value>
+        </Field>
+        <Field Name="user-04">
+            <Value>7878</Value>
+        </Field>
+        <Field Name="user-03">
+            <Value></Value>
+        </Field>
+        <Field Name="user-02">
+            <Value></Value>
+        </Field>
+        <Field Name="user-01">
+            <Value>vladimir.ulicny_hp.com</Value>
+        </Field>
+        <Field Name="test-reference"/>
+        <Field Name="subject"/>
+        <Field Name="request-id"/>
+        <Field Name="request-server">
+            <Value></Value>
+        </Field>
+        <Field Name="user-09">
+            <Value>vladimir.ulicny_hp.com</Value>
+        </Field>
+        <Field Name="user-08">
+            <Value>N/A</Value>
+        </Field>
+        <Field Name="user-07">
+            <Value></Value>
+        </Field>
+        <Field Name="user-06">
+            <Value></Value>
+        </Field>
+        <Field Name="id">
+            <Value>13</Value>
+        </Field>
+        <Field Name="name">
+            <Value>Test9</Value>
+        </Field>
+        <Field Name="has-linkage">
+            <Value>N</Value>
+        </Field>
+        <Field Name="cycle-reference">
+            <Value></Value>
+        </Field>
+        <Field Name="creation-time">
+            <Value>2011-01-27</Value>
+        </Field>
+        <Field Name="request-note">
+            <Value></Value>
+        </Field>
+        <Field Name="closing-version">
+            <Value></Value>
+        </Field>
+        <Field Name="user-14">
+            <Value>ali</Value>
+        </Field>
+        <Field Name="detection-version">
+            <Value></Value>
+        </Field>
+        <Field Name="user-13"/>
+        <Field Name="user-16"/>
+        <Field Name="user-15">
+            <Value>MS Windows XP</Value>
+        </Field>
+        <Field Name="user-10">
+            <Value>R&amp;D Internal</Value>
+        </Field>
+        <Field Name="last-modified">
+            <Value>2011-02-16 16:52:16</Value>
+        </Field>
+        <Field Name="user-12">
+            <Value></Value>
+        </Field>
+        <Field Name="user-11">
+            <Value></Value>
+        </Field>
+        <Field Name="detected-in-rcyc">
+            <Value ReferenceValue="ALI Spring - M1">1002</Value>
+        </Field>
+        <Field Name="severity">
+            <Value>1-Low</Value>
+        </Field>
+        <Field Name="attachment">
+            <Value></Value>
+        </Field>
+        <Field Name="user-18"/>
+        <Field Name="user-17">
+            <Value></Value>
+        </Field>
+        <Field Name="user-19"/>
+        <Field Name="extended-reference">
+            <Value></Value>
+        </Field>
+        <Field Name="detected-by">
+            <Value>vladimir.ulicny_hp.com</Value>
+        </Field>
+        <Field Name="target-rcyc">
+            <Value ReferenceValue="ALI Spring - M1">1002</Value>
+        </Field>
+    </Fields>
+</Entity>

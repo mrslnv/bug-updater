@@ -1,0 +1,14 @@
+#jdbc.driverClassName=oracle.jdbc.OracleDriver
+#jdbc.url=jdbc:oracle:thin:@czvm166:1521:orcl
+#jdbc.username=system
+#jdbc.password=MyDb1
+#jdbc.schema=DEFAULT_ALI_DEV_DB
+#jdbc.schema=DEFAULT_RC3_DB
+#jdbc.schema=DEFAULT_ALI2_DB
+
+jdbc.driverClassName=oracle.jdbc.OracleDriver
+jdbc.url=jdbc:oracle:thin:@ali.devlab.ad:1521:XE
+jdbc.username=system
+jdbc.password=changeit
+jdbc.schema=DEFAULT_ALIGINDAHOUSE_DB
+

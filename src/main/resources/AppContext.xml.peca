@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:lang="http://www.springframework.org/schema/lang" xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                           http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+                           http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+
+
+    <context:annotation-config/>
+    <!--context:property-placeholder location="classpath*:*.properties"/-->
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        <property name="locations">
+            <list>
+      		    <value>classpath:jdbc.properties</value>
+      		    <value>classpath:updater.properties</value>
+      		    <value>classpath:updater.cred.properties</value>
+      	    </list>
+        </property>
+    </bean>
+
+    <!--context:property-placeholder location="classpath:/jdbc.properties"/-->
+
+    <context:component-scan base-package="ali"/>
+
+    <task:annotation-driven executor="myExecutor" scheduler="scheduler"/>
+
+    <task:executor id="myExecutor" pool-size="1"/>
+
+    <task:scheduler id="scheduler" pool-size="1"/>
+
+
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+          p:driverClassName="${jdbc.driverClassName}" p:url="${jdbc.url}" p:username="${jdbc.username}"
+          p:password="${jdbc.password}"/>
+
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
+          p:dataSource-ref="dataSource">
+        <property name="annotatedClasses">
+            <list>
+                <value>ali.bugupdater.db.entities.UpdaterEntity</value>
+                <value>ali.bugupdater.db.entities.RunEntity</value>
+            </list>
+        </property>
+
+<!--
+validate | update | create | create-drop
+DEFAULT_ALI_DEV_DB
+DEFAULT_ALI2_DB
+-->
+        <property name="hibernateProperties">
+            <value>
+                hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+                hibernate.hbm2ddl.auto=update
+                hibernate.default_schema=DEFAULT_ALIGINDAHOUSE_DB
+                hibernate.show_sql=false
+                hibernate.format_sql=true
+                hibernate.use_sql_comments=false
+                hibernate.search.default.directory_provider=org.hibernate.search.store.FSDirectoryProvider
+                hibernate.search.default.indexBase=c:/temp/index
+            </value>
+        </property>
+    </bean>
+
+
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+          p:sessionFactory-ref="sessionFactory"/>
+
+
+</beans>

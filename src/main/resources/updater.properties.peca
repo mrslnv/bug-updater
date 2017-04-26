@@ -1,0 +1,32 @@
+#rest.host=mydtqc01.isr.hp.com
+rest.port=8080
+#rest.host=czvm166
+#rest.port=9999
+#rest.debug=false
+
+
+#rest.bug.urlPath=/qcbin/rest/domains/MERCURY/projects/Prague_Apps/defects
+#rest.bug.query=query=%7Bproject%5BALI%5D%3Blast-modified%5B%3E%27{0}%27%5D%7D
+
+#rest.requirement.urlPath=/qcbin/rest/domains/MERCURY/projects/Prague_Apps/requirements
+#rest.requirement.query=query=%7Blast-modified%5B%3E%27{0}%27%5D%7D
+
+runner.period=7200000
+#runner.instance=czvm166-1
+
+
+rest.host=mydtqc02.isr.hp.com
+runner.instance=pecca-1
+
+
+#Peca ALM 11
+#rest.bug.query=query=%7Bdetected-in-rel%5B1001%5D%3Blast-modified%5B%3E%27{0}%27%5D%7D
+#rest.requirement.query=query=%7Btype-id%5B10%5D%3Blast-modified%5B%3E%27{0}%27%5D%7D
+
+#Peca ALM 12
+rest.bug.urlPath=/qcbin/rest/domains/MERCURY/projects/QC/defects
+rest.bug.query=query={user-08['Web UI Framework'];last-modified[>'{0}']}
+rest.requirement.urlPath=/qcbin/rest/domains/MERCURY/projects/QC/requirements
+rest.requirement.query=query={user-06['Platform Petr Web Platform Team'];last-modified[>'{0}']}
+
+rest.pageSize=400
